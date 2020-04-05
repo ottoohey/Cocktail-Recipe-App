@@ -107,7 +107,9 @@
                             <outlet property="delegate" destination="sn8-X7-G3D" id="Bcp-fB-FwA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Create Cocktails" id="7H4-gM-G9l"/>
+                    <navigationItem key="navigationItem" title="Create Cocktails" id="7H4-gM-G9l">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="1b8-Kf-M7a"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="Gd1-kC-3NI" kind="show" identifier="editNameSegue" id="tts-dt-Gmr"/>
                         <segue destination="t0b-E8-qKU" kind="show" identifier="editInstructionsSegue" id="7w5-56-NDm"/>
@@ -121,7 +123,7 @@
         <!-- Edit Name-->
         <scene sceneID="EpB-jw-GxN">
             <objects>
-                <viewController id="Gd1-kC-3NI" sceneMemberID="viewController">
+                <viewController id="Gd1-kC-3NI" customClass="EditNameViewController" customModule="Cocktail_Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OFe-wU-6eR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,6 +148,9 @@
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirmName:" destination="Gd1-kC-3NI" eventType="touchUpInside" id="O97-GE-Ubk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -162,6 +167,9 @@
                         <viewLayoutGuide key="safeArea" id="0zi-17-8d9"/>
                     </view>
                     <navigationItem key="navigationItem" title=" Edit Name" id="1HM-kG-smS"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="HBp-kn-rLy" id="q1T-PY-shh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBO-3q-P1B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,7 +178,7 @@
         <!--Edit Instructions-->
         <scene sceneID="zct-dn-xWW">
             <objects>
-                <viewController id="t0b-E8-qKU" sceneMemberID="viewController">
+                <viewController id="t0b-E8-qKU" customClass="EditInstructionsViewController" customModule="Cocktail_Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4hF-fS-uv4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,6 +209,9 @@
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirmInstructions:" destination="t0b-E8-qKU" eventType="touchUpInside" id="9ch-EX-0R8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -217,6 +228,9 @@
                         <viewLayoutGuide key="safeArea" id="nC5-mo-6UJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Instructions" id="uaq-4d-N2u"/>
+                    <connections>
+                        <outlet property="instructionsTextView" destination="dgB-zL-e2l" id="Gvw-JN-Z5G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXt-PE-t2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,7 +239,7 @@
         <!--Add Ingredient-->
         <scene sceneID="ujL-l5-BFy">
             <objects>
-                <viewController id="59R-XN-IJh" sceneMemberID="viewController">
+                <viewController id="59R-XN-IJh" customClass="AddIngredientViewController" customModule="Cocktail_Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u9N-tp-vBt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,6 +252,10 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anC-Vh-sWW">
                                 <rect key="frame" x="0.0" y="177" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="59R-XN-IJh" id="Voe-jX-tAW"/>
+                                    <outlet property="delegate" destination="59R-XN-IJh" id="A8Y-85-TfQ"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ql-yx-eRn">
                                 <rect key="frame" x="20" y="401" width="90" height="21"/>
@@ -259,6 +277,9 @@
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirmIngredient:" destination="59R-XN-IJh" eventType="touchUpInside" id="DPw-9H-duj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -280,6 +301,10 @@
                         <viewLayoutGuide key="safeArea" id="m2I-sv-iEu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Ingredient" id="H3S-j7-XMx"/>
+                    <connections>
+                        <outlet property="ingredientPickerView" destination="anC-Vh-sWW" id="dve-qk-vna"/>
+                        <outlet property="measurementTextField" destination="h9G-SQ-Unu" id="NSY-EL-FEG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rm-pl-5tN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
