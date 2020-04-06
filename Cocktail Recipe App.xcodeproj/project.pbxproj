@@ -16,6 +16,9 @@
 		A7468AAE243970D7002C2011 /* IngredientMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7468AAD243970D7002C2011 /* IngredientMeasurement.swift */; };
 		A7468AB0243970E7002C2011 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7468AAF243970E7002C2011 /* Ingredient.swift */; };
 		A7468AB22439795C002C2011 /* CreateDisplayCocktailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7468AB12439795C002C2011 /* CreateDisplayCocktailTableViewController.swift */; };
+		A7E2450E24399F62005C9D01 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2450D24399F62005C9D01 /* EditNameViewController.swift */; };
+		A7E2451024399F8F005C9D01 /* EditInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2450F24399F8F005C9D01 /* EditInstructionsViewController.swift */; };
+		A7E2451224399FA5005C9D01 /* AddIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2451124399FA5005C9D01 /* AddIngredientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		A7468AAD243970D7002C2011 /* IngredientMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientMeasurement.swift; sourceTree = "<group>"; };
 		A7468AAF243970E7002C2011 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		A7468AB12439795C002C2011 /* CreateDisplayCocktailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDisplayCocktailTableViewController.swift; sourceTree = "<group>"; };
+		A7E2450D24399F62005C9D01 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
+		A7E2450F24399F8F005C9D01 /* EditInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInstructionsViewController.swift; sourceTree = "<group>"; };
+		A7E2451124399FA5005C9D01 /* AddIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 				A7468AAD243970D7002C2011 /* IngredientMeasurement.swift */,
 				A7468AAF243970E7002C2011 /* Ingredient.swift */,
 				A7468AB12439795C002C2011 /* CreateDisplayCocktailTableViewController.swift */,
+				A7E2450D24399F62005C9D01 /* EditNameViewController.swift */,
+				A7E2450F24399F8F005C9D01 /* EditInstructionsViewController.swift */,
+				A7E2451124399FA5005C9D01 /* AddIngredientViewController.swift */,
 			);
 			path = "Cocktail Recipe App";
 			sourceTree = "<group>";
@@ -147,9 +156,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E2451224399FA5005C9D01 /* AddIngredientViewController.swift in Sources */,
 				A7468AAE243970D7002C2011 /* IngredientMeasurement.swift in Sources */,
+				A7E2451024399F8F005C9D01 /* EditInstructionsViewController.swift in Sources */,
 				A7468AB0243970E7002C2011 /* Ingredient.swift in Sources */,
 				A7468A9824396FFF002C2011 /* AppDelegate.swift in Sources */,
+				A7E2450E24399F62005C9D01 /* EditNameViewController.swift in Sources */,
 				A7468A9A24396FFF002C2011 /* SceneDelegate.swift in Sources */,
 				A7468AB22439795C002C2011 /* CreateDisplayCocktailTableViewController.swift in Sources */,
 				A7468AAC243970BD002C2011 /* Cocktail.swift in Sources */,
